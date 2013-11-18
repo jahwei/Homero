@@ -17,7 +17,7 @@ fn9=`printf "maurer.Spring.nc"`
 cdo remapcon,$inpath/$fn1 $inpath/$fn2 $inpath/$fn3
 
 #calculate the differences
-ncbo $inpath/$fn1 $inpath/$fn3 $outpath/$fn4
+ncbo -v Prec,Tmax,Tmin $inpath/$fn1 $inpath/$fn3 $outpath/$fn4
 
 #calculate seasonal mean
 cdo seasmean $inpath/$fn4 $outpath/$fn5
